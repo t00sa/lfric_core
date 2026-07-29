@@ -121,6 +121,9 @@
         inherit=EX1A_BASE
         [[[directives]]]
             -l tmpsize=6GB
+{% if site_vars["ex_trustzone"] == "collab" %}
+            -q = collabshared
+{% endif %}
 
     [[EX1A_TECH_TESTS]]
         inherit=EX1A_TECH_BASE
